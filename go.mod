@@ -16,4 +16,6 @@ require (
 	golang.org/x/sys v0.12.0 // indirect
 )
 
-require github.com/gofiber/fiber/v2 v2.49.2
+require (
+	github.com/gofiber/fiber/v2 v2.49.2
+)
