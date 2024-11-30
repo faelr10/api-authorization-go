@@ -6,5 +6,5 @@ import (
 
 type IUserHandlers interface {
 	NewUser(ctx *fiber.Ctx) error
-	//TransferRequestPix(ctx *fiber.Ctx) error
+	GetUserById(ctx *fiber.Ctx) error
 }
