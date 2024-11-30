@@ -1,7 +1,6 @@
 package repository
 
 import (
-	"fmt"
 
 	"github.com/faelr10/api-authorization-go/internal/infra/database/models"
 	user_pkg "github.com/faelr10/api-authorization-go/pkg/interfaces/user"
@@ -36,8 +35,6 @@ func (u *UserRepositoryImpl) InsertUser(params *user_pkg.NewUserRepositoryParams
 
 func (u *UserRepositoryImpl) GetUserById(where map[string]interface{}) (*models.User, error) {
 	user := &models.User{}
-
-	fmt.Println(where)
 
 	err := u.Database.Where(where).First(user).Error 
 	 

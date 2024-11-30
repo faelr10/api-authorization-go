@@ -55,10 +55,9 @@ func (u *UserImpl) NewUser(input *user_pkg.INewUserParams) (*user_pkg.INewUserRe
 
 func (u *UserImpl) GetUserById(id string) (*user_pkg.INewUserResponse, error) {
 
-	//verifyAlreadyExists
 	user, err := u.Repository.GetUserById(map[string]interface{}{"id": id})
 	if err != nil {
-		return nil, fmt.Errorf("email já cadastrado")
+		return nil, err
 	}
 
 	return &user_pkg.INewUserResponse{
